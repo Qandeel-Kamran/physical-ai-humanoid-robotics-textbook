@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \".specify/scripts/powershell/create-new-feature.ps1 -Json -ShortName ''textbook-generation'' -Number 1 ''Generate textbook structure for Physical AI & Humanoid Robotics course''\")",
+      "Bash(mkdir -p specs/001-textbook-generation)",
+      "Bash(git fetch --all --prune)",
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly\")",
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json\")"
+    ]
+  }
+}

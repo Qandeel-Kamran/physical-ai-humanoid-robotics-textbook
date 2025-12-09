@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: Textbook Content Generation API
+  description: API for generating textbook content in MDX format
+  version: 1.0.0
+paths:
+  /generate/chapter:
+    post:
+      summary: Generate a new textbook chapter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                module:
+                  type: string
+                  description: The module name for the chapter
+                  example: "Module 1"
+                chapter_title:
+                  type: string
+                  description: The title of the chapter
+                  example: "Physical AI and Embodied Intelligence"
+                topics:
+                  type: array
+                  items:
+                    type: string
+                  description: List of topics to cover in the chapter
+                  example: ["Physical AI", "Embodied Intelligence", "Sensors", "Real-world Physics"]
+                framework_examples:
+                  type: array
+                  items:
+                    type: string
+                  description: Frameworks to include examples for
+                  example: ["ROS 2", "Isaac Sim", "Gazebo"]
+                include_diagrams:
+                  type: boolean
+                  description: Whether to include Mermaid diagrams
+                  example: true
+                include_exercises:
+                  type: boolean
+                  description: Whether to include exercises
+                  example: true
+              required:
+                - module
+                - chapter_title
+                - topics
+      responses:
+        '200':
+          description: Successfully generated chapter content
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  chapter_content:
+                    type: string
+                    description: The generated MDX content
+                  filename:
+                    type: string
+                    description: Suggested filename for the chapter
+                  frontmatter:
+                    type: object
+                    description: Frontmatter for the MDX file
+        '400':
+          description: Invalid input parameters
