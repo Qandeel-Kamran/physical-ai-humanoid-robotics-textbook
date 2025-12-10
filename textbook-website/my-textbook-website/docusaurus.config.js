@@ -19,15 +19,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://ameen-alam.github.io',
+  url: 'https://qandeel-kamran.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
+  baseUrl: '/physical-ai-humanoid-robotics-textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ameen-alam', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // Usually your repo name.
+  organizationName: 'qandeel-kamran', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-humanoid-robotics-textbook', // Usually your repo name.
 
   onBrokenLinks: 'warn',
 
@@ -56,6 +56,32 @@ const config = {
     ],
   ],
 
+  plugins: [
+    // Plugin to add the chatbot to all pages
+    async function myPlugin(context, options) {
+      return {
+        name: 'chatbot-plugin',
+        configureWebpack(config, isServer, utils) {
+          return {
+            resolve: {
+              alias: {
+                path: require.resolve('path-browserify'),
+              },
+            },
+          };
+        },
+      };
+    },
+  ],
+
+  scripts: [
+    {
+      src: '/js/chatbot-loader.js',
+      async: true,
+      defer: true,
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -78,7 +104,7 @@ const config = {
             label: 'Textbook',
           },
           {
-            href: 'https://github.com/ameen-alam/Physical-AI-Humanoid-Robotics-Textbook',
+            href: 'https://github.com/qandeel-kamran/physical-ai-humanoid-robotics-textbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -105,7 +131,7 @@ const config = {
             items: [
               {
                 label: 'GitHub Repository',
-                href: 'https://github.com/ameen-alam/Physical-AI-Humanoid-Robotics-Textbook',
+                href: 'https://github.com/qandeel-kamran/physical-ai-humanoid-robotics-textbook',
               },
             ],
           },
@@ -114,7 +140,7 @@ const config = {
             items: [
               {
                 label: 'About the Author',
-                href: 'https://github.com/ameen-alam',
+                href: 'https://github.com/qandeel-kamran',
               },
             ],
           },

@@ -1,0 +1,14 @@
+{
+  "name": "physical-ai-textbook-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Physical AI & Humanoid Robotics Textbook with RAG chatbot",
+  "main": "main.py",
+  "scripts": {
+    "start": "uvicorn main:app --host 0.0.0.0 --port 8000 --reload",
+    "dev": "uvicorn main:app --host 0.0.0.0 --port 8000 --reload",
+    "migrate": "python -m alembic upgrade head"
+  },
+  "keywords": ["ai", "robotics", "textbook", "rag", "chatbot"],
+  "author": "Qandeel Kamran",
+  "license": "MIT"
+}
