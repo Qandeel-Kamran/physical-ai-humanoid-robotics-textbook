@@ -5,7 +5,30 @@
       "Bash(mkdir -p specs/001-textbook-generation)",
       "Bash(git fetch --all --prune)",
       "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly\")",
-      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json\")"
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json\")",
+      "Bash(bash deploy-textbook.sh)",
+      "Bash(npm install @docusaurus/core @docusaurus/preset-classic)",
+      "Bash(mkdir -p textbook-website/my-textbook-website/src/css)",
+      "Bash(echo '<svg xmlns=\"\"http://www.w3.org/2000/svg\"\" width=\"\"100\"\" height=\"\"100\"\" viewBox=\"\"0 0 100 100\"\"><rect width=\"\"100\"\" height=\"\"100\"\" fill=\"\"#2e8555\"\"/><text x=\"\"50\"\" y=\"\"50\"\" text-anchor=\"\"middle\"\" dominant-baseline=\"\"middle\"\" fill=\"\"white\"\" font-size=\"\"16\"\">TEXTBOOK</text></svg>')",
+      "Bash(for file in docs/*.md)",
+      "Bash(do sed -i 's/!\\[.*\\](\\.\\/assets\\/.*\\.\\(png\\|jpg\\|gif\\|svg\\))/\\[Image: Reference to diagram or illustration\\]/g' \"$file\")",
+      "Bash(done)",
+      "Bash(npm run build)",
+      "Bash(git commit -m \"feat: Add built Docusaurus textbook site to docs folder for GitHub Pages\n\n- Added comprehensive Physical AI & Humanoid Robotics textbook with Docusaurus frontend\n- Created professional book-like interface with all chapters organized in sidebar\n- Replaced broken image references with placeholder text for proper rendering\n- Configured for GitHub Pages deployment at /physical-ai-humanoid-robotics-textbook/\")",
+      "Bash(git push origin main)",
+      "Bash(git add docs/README.md)",
+      "Bash(git commit -m \"docs: Add README for GitHub Pages site\")",
+      "Bash(npm run)",
+      "Bash(npx docusaurus build)",
+      "Bash(timeout 300 npx docusaurus build)",
+      "Bash(timeout 120 npx docusaurus build)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(npx docusaurus serve)",
+      "Bash(git add deploy-textbook.sh textbook-website/ .claude/settings.local.json)",
+      "Bash(git reset)",
+      "Bash(git add .claude/settings.local.json deploy-textbook.sh textbook-website/my-textbook-website/docusaurus.config.js textbook-website/my-textbook-website/src/ textbook-website/my-textbook-website/docs/ textbook-website/my-textbook-website/sidebars.js textbook-website/my-textbook-website/package.json textbook-website/my-textbook-website/static/)",
+      "Bash(git add:*)"
     ]
   }
 }
