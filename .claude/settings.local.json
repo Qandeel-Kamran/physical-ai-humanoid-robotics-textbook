@@ -28,7 +28,12 @@
       "Bash(git add deploy-textbook.sh textbook-website/ .claude/settings.local.json)",
       "Bash(git reset)",
       "Bash(git add .claude/settings.local.json deploy-textbook.sh textbook-website/my-textbook-website/docusaurus.config.js textbook-website/my-textbook-website/src/ textbook-website/my-textbook-website/docs/ textbook-website/my-textbook-website/sidebars.js textbook-website/my-textbook-website/package.json textbook-website/my-textbook-website/static/)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"feat: Add Docusaurus textbook website with homepage\n\n- Add Docusaurus configuration with proper GitHub Pages settings\n- Create homepage with all textbook modules and content\n- Add all textbook chapters as documentation pages\n- Include custom CSS and logo for the textbook website\n- Add deploy script for building and deploying to GitHub Pages\n\nThe website is now configured for GitHub Pages at https://ameen-alam.github.io/Physical-AI-Humanoid-Robotics-Textbook/\")",
+      "Bash(npx docusaurus start --port 3001)",
+      "Bash(npx docusaurus serve --port 3000)",
+      "Bash(taskkill /PID 8732 /F)",
+      "Bash(taskkill /F /PID 8732)"
     ]
   }
 }

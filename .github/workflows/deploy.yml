@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd textbook-website/my-textbook-website
-          npm install
+          npm ci
 
       - name: Build website
         run: |
