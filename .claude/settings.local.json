@@ -33,7 +33,9 @@
       "Bash(npx docusaurus start --port 3001)",
       "Bash(npx docusaurus serve --port 3000)",
       "Bash(taskkill /PID 8732 /F)",
-      "Bash(taskkill /F /PID 8732)"
+      "Bash(taskkill /F /PID 8732)",
+      "Bash(git commit -m \"chore: Update settings and workflow configuration\")",
+      "Bash(git commit -m \"fix: Remove invalid onBrokenMarkdownImages config option\n\n- Remove invalid ''onBrokenMarkdownImages'' field from docusaurus.config.js\n- This was causing build failures in Docusaurus v3\n- Site now builds successfully\")"
     ]
   }
 }
