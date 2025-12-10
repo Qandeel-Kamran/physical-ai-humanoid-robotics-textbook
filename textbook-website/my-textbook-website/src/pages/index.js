@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Welcome to ${siteConfig.title}`}
       description="A comprehensive textbook on Physical AI and Humanoid Robotics">
       <HomepageHeader />
       <main>
@@ -37,54 +37,51 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <div className="col col--4 padding-horiz--md">
-                <h2>Module 1: The Robotic Nervous System (ROS 2)</h2>
-                <p>Master ROS 2 architecture, communication patterns, and robot modeling. Learn to build distributed robotic systems using nodes, topics, services, and actions.</p>
+                <h2>Chapter 1-6: Foundations</h2>
+                <p>Explore the fundamentals of Physical AI, biomechanics, sensorimotor integration, cognitive architectures, actuation systems, and control theory that form the foundation of humanoid robotics.</p>
                 <ul>
-                  <li>Explain the ROS 2 computation graph and its components</li>
-                  <li>Create publishers, subscribers, and service clients using rclpy</li>
-                  <li>Define robot structure using URDF and visualize in RViz2</li>
+                  <li>Understand the principles of Physical AI and embodiment</li>
+                  <li>Learn biomechanical principles underlying human movement</li>
+                  <li>Master sensorimotor integration for robotic systems</li>
                 </ul>
               </div>
               <div className="col col--4 padding-horiz--md">
-                <h2>Module 2: Digital Twins - Simulation & Sensors</h2>
-                <p>Build digital twins for robotic systems using Gazebo and Unity. Simulate sensors, physics, and environments for testing before deploying to physical hardware.</p>
+                <h2>Chapter 7-12: Locomotion & Control</h2>
+                <p>Discover advanced locomotion techniques, manipulation strategies, perception systems, learning algorithms, human-robot interaction, and simulation methodologies.</p>
                 <ul>
-                  <li>Create Gazebo simulation environments with physics and sensors</li>
-                  <li>Integrate Unity for photorealistic sensor simulation</li>
-                  <li>Test navigation and perception algorithms in simulation</li>
+                  <li>Implement dynamic locomotion for humanoid robots</li>
+                  <li>Design dexterous manipulation systems</li>
+                  <li>Develop perception and learning capabilities</li>
                 </ul>
               </div>
               <div className="col col--4 padding-horiz--md">
-                <h2>Module 3: NVIDIA Isaac - Perception & Navigation</h2>
-                <p>Leverage NVIDIA Isaac Sim for GPU-accelerated robotics. Implement VSLAM, Nav2 navigation stacks, and reinforcement learning for autonomous behaviors.</p>
+                <h2>Chapter 13-18: Applications & Ethics</h2>
+                <p>Examine hardware design, energy efficiency, safety protocols, real-world applications, future directions, ethical considerations, and concluding thoughts on humanoid robotics.</p>
                 <ul>
-                  <li>Set up and configure NVIDIA Isaac Sim environments</li>
-                  <li>Implement Visual SLAM for robot localization</li>
-                  <li>Deploy Nav2 navigation stack for autonomous navigation</li>
+                  <li>Explore hardware implementations and design challenges</li>
+                  <li>Understand safety and energy efficiency requirements</li>
+                  <li>Consider ethical implications and future directions</li>
                 </ul>
               </div>
             </div>
             <div className="row padding-vert--md">
               <div className="col col--6">
-                <h2>Module 4: VLA & Humanoid Robotics</h2>
-                <p>Integrate Vision-Language-Action models with humanoid robots. Master humanoid kinematics, manipulation, and conversational AI for natural human-robot interaction.</p>
+                <h2>About This Textbook</h2>
+                <p>This comprehensive textbook provides a complete guide to Physical AI and Humanoid Robotics, covering theoretical foundations, practical implementations, and future directions. Each chapter builds upon previous concepts to provide a cohesive understanding of this complex and rapidly evolving field.</p>
                 <ul>
-                  <li>Calculate forward and inverse kinematics for humanoid robots</li>
-                  <li>Implement manipulation primitives for pick-and-place tasks</li>
-                  <li>Integrate conversational AI with robot action planning</li>
+                  <li>Comprehensive coverage from fundamentals to advanced topics</li>
+                  <li>Practical examples and implementation strategies</li>
+                  <li>Insights into current research and future directions</li>
                 </ul>
               </div>
               <div className="col col--4 col--offset-1">
                 <h2>Quick Links</h2>
                 <ul>
-                  <li><Link to="/docs/setup-workstation">Workstation Setup</Link></li>
-                  <li><Link to="/docs/setup-edge-kit">Edge Kit Setup</Link></li>
-                  <li><Link to="/docs/setup-cloud">Cloud Setup</Link></li>
-                  <li><Link to="/docs/glossary">Glossary</Link></li>
-                  <li><Link to="/docs/module-1-ros2">Module 1: ROS 2</Link></li>
-                  <li><Link to="/docs/module-2-digital-twin">Module 2: Digital Twin</Link></li>
-                  <li><Link to="/docs/module-3-isaac-sim">Module 3: Isaac Sim</Link></li>
-                  <li><Link to="/docs/module-4-vla-humanoids">Module 4: VLA & Humanoids</Link></li>
+                  <li><Link to="/docs/chapter-01-introduction">Introduction</Link></li>
+                  <li><Link to="/docs/chapter-07-locomotion">Locomotion</Link></li>
+                  <li><Link to="/docs/chapter-11-hri">Human-Robot Interaction</Link></li>
+                  <li><Link to="/docs/chapter-18-ethics">Ethics</Link></li>
+                  <li><Link to="/docs/textbook-summary">Summary</Link></li>
                 </ul>
               </div>
             </div>

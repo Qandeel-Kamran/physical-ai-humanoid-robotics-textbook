@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="512" viewBox="0 0 1024 512">
+  <rect width="1024" height="512" fill="#ffffff"/>
+  <rect x="0" y="0" width="1024" height="512" fill="#1a5d1a" opacity="0.1"/>
+  <text x="512" y="200" text-anchor="middle" dominant-baseline="middle" fill="#000000" font-size="48" font-family="Arial, sans-serif" font-weight="bold">Physical AI &amp; Humanoid Robotics</text>
+  <text x="512" y="280" text-anchor="middle" dominant-baseline="middle" fill="#1a5d1a" font-size="28" font-family="Arial, sans-serif">A comprehensive textbook on Physical AI and Humanoid Robotics</text>
+  <rect x="400" y="350" width="224" height="60" fill="#1a5d1a" rx="8"/>
+  <text x="512" y="385" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="20" font-family="Arial, sans-serif">Read the Textbook</text>
+</svg>

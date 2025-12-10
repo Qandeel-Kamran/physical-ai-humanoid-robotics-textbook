@@ -6,25 +6,73 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1a5d1a; /* Darker green */
+  --ifm-color-primary-dark: #0f3d0f; /* Dark green */
+  --ifm-color-primary-darker: #0a2d0a; /* Very dark green */
+  --ifm-color-primary-darkest: #051d05; /* Darkest green */
+  --ifm-color-primary-light: #3a7d3a; /* Light green */
+  --ifm-color-primary-lighter: #5a9d5a; /* Lighter green */
+  --ifm-color-primary-lightest: #7abe7a; /* Lightest green */
+  --ifm-color-secondary: #ffffff; /* White */
+  --ifm-color-tertiary: #000000; /* Black */
+  --ifm-background-color: #ffffff; /* White background */
+  --ifm-background-surface-color: #f8f8f8; /* Light gray background */
+  --ifm-font-color-base: #000000; /* Black text */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #4caf50; /* Green */
+  --ifm-color-primary-dark: #388e3c; /* Dark green */
+  --ifm-color-primary-darker: #2e7d32; /* Darker green */
+  --ifm-color-primary-darkest: #1b5e20; /* Darkest green */
+  --ifm-color-primary-light: #66bb6a; /* Light green */
+  --ifm-color-primary-lighter: #81c784; /* Lighter green */
+  --ifm-color-primary-lightest: #a5d6a7; /* Lightest green */
+  --ifm-color-secondary: #ffffff; /* White */
+  --ifm-color-tertiary: #000000; /* Black */
+  --ifm-background-color: #000000; /* Black background */
+  --ifm-background-surface-color: #1a1a1a; /* Dark gray background */
+  --ifm-font-color-base: #ffffff; /* White text */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Additional custom styles for green/white/black theme */
+html[data-theme='light'] {
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #1a5d1a;
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: #ffffff;
+  --ifm-footer-link-hover-color: #a5d6a7;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #000000;
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #0f3d0f;
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: #a5d6a7;
+  --ifm-footer-link-hover-color: #ffffff;
+}
+
+/* Custom link styles */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Custom card and container styles */
+.card {
+  border: 1px solid #1a5d1a;
+  border-radius: 8px;
+}
+
+html[data-theme='dark'] .card {
+  border: 1px solid #4caf50;
 }
