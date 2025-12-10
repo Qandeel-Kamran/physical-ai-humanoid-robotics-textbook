@@ -15,11 +15,18 @@
   --ifm-color-primary-lightest: #7abe7a; /* Lightest green */
   --ifm-color-secondary: #ffffff; /* White */
   --ifm-color-tertiary: #000000; /* Black */
-  --ifm-background-color: #ffffff; /* White background */
-  --ifm-background-surface-color: #f8f8f8; /* Light gray background */
-  --ifm-font-color-base: #000000; /* Black text */
+  --ifm-background-color: #f8f9fa; /* Light gray background */
+  --ifm-background-surface-color: #ffffff; /* White background */
+  --ifm-font-color-base: #212529; /* Dark gray text */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(26, 93, 26, 0.1);
+  --ifm-font-family-base: 'Georgia, "Times New Roman", Times, serif';
+  --ifm-line-height-base: 1.7;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+  --ifm-font-size-base: 17px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -33,15 +40,16 @@
   --ifm-color-primary-lightest: #a5d6a7; /* Lightest green */
   --ifm-color-secondary: #ffffff; /* White */
   --ifm-color-tertiary: #000000; /* Black */
-  --ifm-background-color: #000000; /* Black background */
-  --ifm-background-surface-color: #1a1a1a; /* Dark gray background */
-  --ifm-font-color-base: #ffffff; /* White text */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #121212; /* Dark background */
+  --ifm-background-surface-color: #1e1e1e; /* Darker gray background */
+  --ifm-font-color-base: #e0e0e0; /* Light gray text */
+  --docusaurus-highlighted-code-line-bg: rgba(76, 175, 80, 0.1);
+  --ifm-font-family-base: 'Georgia, "Times New Roman", Times, serif';
 }
 
-/* Additional custom styles for green/white/black theme */
+/* Digital book styling */
 html[data-theme='light'] {
-  --ifm-background-color: #ffffff;
+  --ifm-background-color: #f8f9fa;
   --ifm-navbar-background-color: #ffffff;
   --ifm-footer-background-color: #1a5d1a;
   --ifm-footer-color: #ffffff;
@@ -50,29 +58,291 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --ifm-background-color: #000000;
-  --ifm-navbar-background-color: #000000;
+  --ifm-background-color: #121212;
+  --ifm-navbar-background-color: #1e1e1e;
   --ifm-footer-background-color: #0f3d0f;
   --ifm-footer-color: #ffffff;
   --ifm-footer-link-color: #a5d6a7;
   --ifm-footer-link-hover-color: #ffffff;
 }
 
+/* Digital book layout improvements */
+body {
+  font-family: var(--ifm-font-family-base);
+  line-height: var(--ifm-line-height-base);
+  font-size: var(--ifm-font-size-base);
+}
+
+/* Book-like styling for main content */
+.main-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Enhanced typography */
+.markdown {
+  font-family: var(--ifm-font-family-base);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.markdown h1 {
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.markdown h2 {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding-bottom: 0.3rem;
+}
+
+.markdown p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+/* Book-like sidebar styling */
+.menu {
+  font-size: 0.9rem;
+}
+
+.menu__list {
+  padding-left: 0.5rem;
+}
+
+.menu__link--active {
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: 12px;
+}
+
+/* Enhanced code blocks */
+.prism-code {
+  border-radius: 8px;
+  padding: 1rem !important;
+  font-size: 0.9rem;
+}
+
 /* Custom link styles */
 a {
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Blockquote styling for tips/notes */
+.alert {
+  border-radius: 8px;
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background-color: rgba(26, 93, 26, 0.05);
+}
+
+.alert--info {
+  border-left-color: var(--ifm-color-primary);
+  background-color: rgba(26, 93, 26, 0.05);
+}
+
+/* Table styling */
+.markdown table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  text-align: left;
+}
+
+.markdown table th {
+  background-color: rgba(26, 93, 26, 0.1);
+  font-weight: 600;
+}
+
+/* Card-like container for content sections */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Navbar enhancements */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.7rem 1rem;
+}
+
+.navbar__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Footer enhancements */
+.footer {
+  padding: 2rem 0 1.5rem;
+}
+
+/* Pagination styling for chapter navigation */
+.pagination-nav {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
 /* Custom card and container styles */
 .card {
-  border: 1px solid #1a5d1a;
-  border-radius: 8px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card__header,
+.card__footer {
+  background-color: transparent;
 }
 
 html[data-theme='dark'] .card {
-  border: 1px solid #4caf50;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Breadcrumb styling */
+.theme-doc-breadcrumbs {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Article container for better book-like feel */
+article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Code block container */
+.admonition {
+  border-radius: 8px;
+}
+
+/* Search bar styling */
+.navbar__search {
+  padding-left: 1rem;
+}
+
+/* Button styling */
+.button {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Image styling */
+.markdown img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+/* Improved sidebar navigation */
+.theme-doc-sidebar-menu {
+  font-size: 0.9rem;
+}
+
+/* Chapter numbering and organization */
+.table-of-contents__link,
+.table-of-contents__subitem {
+  padding: 0.25rem 0;
+}
+
+/* Better spacing for content */
+.theme-doc-markdown {
+  padding: 1.5rem 0;
+}
+
+/* Page title styling */
+.theme-doc-article-header {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive design improvements */
+@media (max-width: 996px) {
+  .main-wrapper {
+    padding: 0 0.5rem;
+  }
+
+  .navbar__inner {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Print-like styling for better readability */
+.markdown {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* Custom styling for chapter content */
+.chapter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Styling for learning outcomes */
+.learning-outcomes {
+  background-color: rgba(26, 93, 26, 0.05);
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.learning-outcomes h3 {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+}
+
+.learning-outcomes ul {
+  margin-bottom: 0;
+}
+
+/* Styling for chapter summaries */
+.chapter-summary {
+  background-color: rgba(26, 93, 26, 0.03);
+  border: 1px solid rgba(26, 93, 26, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
 }

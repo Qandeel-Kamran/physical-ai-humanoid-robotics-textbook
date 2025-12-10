@@ -56,27 +56,14 @@ const config = {
     ],
   ],
 
-  plugins: [
-    // Plugin to add the chatbot to all pages
-    async function myPlugin(context, options) {
-      return {
-        name: 'chatbot-plugin',
-        configureWebpack(config, isServer, utils) {
-          return {
-            resolve: {
-              alias: {
-                path: require.resolve('path-browserify'),
-              },
-            },
-          };
-        },
-      };
-    },
-  ],
-
   scripts: [
     {
       src: '/js/chatbot-loader.js',
+      async: true,
+      defer: true,
+    },
+    {
+      src: '/js/chapter-navigation-loader.js',
       async: true,
       defer: true,
     },
